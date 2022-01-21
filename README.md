@@ -1,6 +1,6 @@
 # PySketches
 
-How To
+How To:
 PySketches uses several inputs. arrow keys will move the sketcher,
 “Z” will pull your pen off the canvas so you can move around the canvas without drwaing.
 “X” allows you to put the pen back on the canvas to continue drawing.
