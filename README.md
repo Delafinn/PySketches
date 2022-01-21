@@ -1,8 +1,4 @@
 # PySketches
-Hello World! Welcome to PySketches!
-Pysketches is a python etch n sketch app that has multiple colors for drawing,
-the ability to pick up the pen so you don’t have to sketch over your work.
-and the abilty to put the pen back on the canvas to continue your drawing. as well as the abilty to clear the canvas.
 
 How To
 PySketches uses several inputs. arrow keys will move the sketcher,
