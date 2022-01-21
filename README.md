@@ -1,7 +1,4 @@
 # PySketches
-
-
-Welcome to PySketches!
 Hello World! Welcome to PySketches!
 Pysketches is a python etch n sketch app that has multiple colors for drawing,
 the ability to pick up the pen so you don’t have to sketch over your work.
