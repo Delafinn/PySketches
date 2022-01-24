@@ -50,6 +50,9 @@ def pendown():
 def clear():
     tim.clear()
 
+def RetroTheme():
+    return scr.bgcolor("gray")
+
 scr.onkey(key = "Up", fun = moveup)
 scr.onkey(key = "Down", fun = movedown)
 scr.onkey(key = "Right", fun = moveright)
@@ -58,6 +61,7 @@ scr.onkey(key = "z", fun = penup)
 scr.onkey(key = "x", fun = pendown)
 scr.onkey(key = "c", fun = random_colors)
 scr.onkey(key = "space", fun =clear)
+scr.onkey(key = "r", fun = RetroTheme)
 
 scr.exitonclick()
 
