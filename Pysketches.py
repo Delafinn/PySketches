@@ -52,17 +52,23 @@ def clear():
     tim.clear()
 
 def RetroTheme():
-    return scr.bgcolor("gray")
+    return scr.bgcolor("dark gray")
 
-scr.onkey(key = "Up", fun = moveup)
-scr.onkey(key = "Down", fun = movedown)
-scr.onkey(key = "Right", fun = moveright)
-scr.onkey(key = "Left", fun = moveleft)
-scr.onkey(key = "z", fun = penup)
-scr.onkey(key = "x", fun = pendown)
-scr.onkey(key = "c", fun = random_colors)
-scr.onkey(key = "space", fun =clear)
-scr.onkey(key = "r", fun = RetroTheme)
+def lighttheme():
+    return scr.bgcolor("white")
+
+
+
+scr.onkeypress(key = "Up", fun = moveup)
+scr.onkeypress(key = "Down", fun = movedown)
+scr.onkeypress(key = "Right", fun = moveright)
+scr.onkeypress(key = "Left", fun = moveleft)
+scr.onkeypress(key = "z", fun = penup)
+scr.onkeypress(key = "x", fun = pendown)
+scr.onkeypress(key = "c", fun = random_colors)
+scr.onkeypress(key = "space", fun =clear)
+scr.onkeypress(key = "r", fun = RetroTheme)
+scr.onkeypress(key = "e", fun = lighttheme)
 
 scr.exitonclick()
 
@@ -79,4 +85,6 @@ PySketches uses several inputs. arrow keys will move the sketcher,
 “X” allows you to put the pen back on the canvas to continue drawing.
 “C” allows you the change the color (keep in mind the colors are randomly generated.
 “Spacebar” will clear the canvas.
+ "e" will make the canvas white
+ "r" will make the  canvas gray
 Lastly, clicking on the Canvas will exit the python program."""
