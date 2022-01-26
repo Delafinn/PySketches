@@ -1,90 +1,64 @@
-from turtle import Turtle , Screen
 import random
-from random import randint
+import turtle
 
 
 def random_colors():
-    r1 = randint(0,255)
-    r2 = randint(0,255)
-    r3 = randint(0,255)
-    random_colors = [r1,r2,r3]
-    return tim.color(random_colors)
+    r1 = random.randint(0, 255)
+    r2 = random.randint(0, 255)
+    r3 = random.randint(0, 255)
+    colors = [r1, r2, r3]
+    tim.color(colors)
 
 
-#main
+canvas = turtle.Screen()
+canvas.colormode(255)
+canvas.listen()
+canvas.title("PySketches")
 
-scr = Screen()
-scr.colormode(255)
-scr.listen()
-scr.title("PySketches")
-
-
-tim = Turtle()
+tim = turtle.Turtle()
 tim.shape("circle")
 tim.speed("fastest")
 tim.width(3)
-tim.shapesize(1,1,0)
+tim.shapesize(0.5, 0.5, 0)
 
 
-def moveup():
+def move_up():
     tim.setheading(90)
     tim.fd(10)
 
-def movedown():
+
+def move_down():
     tim.setheading(270)
     tim.fd(10)
 
-def moveright():
+
+def move_right():
     tim.setheading(0)
     tim.fd(10)
 
-def moveleft():
+
+def move_left():
     tim.setheading(180)
     tim.fd(10)
 
-def penup():
-    tim.penup()
 
-def pendown():
-    tim.pendown()
-
-def clear():
-    tim.clear()
-
-def RetroTheme():
-    return scr.bgcolor("dark gray")
-
-def lighttheme():
-    return scr.bgcolor("white")
+def gray_theme():
+    canvas.bgcolor("dark gray")
 
 
-
-scr.onkeypress(key = "Up", fun = moveup)
-scr.onkeypress(key = "Down", fun = movedown)
-scr.onkeypress(key = "Right", fun = moveright)
-scr.onkeypress(key = "Left", fun = moveleft)
-scr.onkeypress(key = "z", fun = penup)
-scr.onkeypress(key = "x", fun = pendown)
-scr.onkeypress(key = "c", fun = random_colors)
-scr.onkeypress(key = "space", fun =clear)
-scr.onkeypress(key = "r", fun = RetroTheme)
-scr.onkeypress(key = "e", fun = lighttheme)
-
-scr.exitonclick()
+def light_theme():
+    canvas.bgcolor("white")
 
 
+canvas.onkeypress(key="Up", fun=move_up)
+canvas.onkeypress(key="Down", fun=move_down)
+canvas.onkeypress(key="Right", fun=move_right)
+canvas.onkeypress(key="Left", fun=move_left)
+canvas.onkeypress(key="z", fun=tim.penup())
+canvas.onkeypress(key="x", fun=tim.pendown())
+canvas.onkeypress(key="c", fun=random_colors)
+canvas.onkeypress(key="space", fun=tim.clear())
+canvas.onkeypress(key="g", fun=gray_theme)
+canvas.onkeypress(key="e", fun=light_theme)
 
-"""Welcome to PySketches!
-Hello World! Welcome to PySketches!
-Pysketches is a python etch n sketch app that has multiple colors for drawing,
-the ability to pick up the pen so you don’t have to sketch over your work.
-and the abilty to put the pen back on the canvas to continue your drawing. as well as the abilty to clear the canvas.
-How To
-PySketches uses several inputs. arrow keys will move the sketcher,
-“Z” will pull your pen off the canvas so you can move around the canvas without drwaing.
-“X” allows you to put the pen back on the canvas to continue drawing.
-“C” allows you the change the color (keep in mind the colors are randomly generated.
-“Spacebar” will clear the canvas.
- "e" will make the canvas white
- "r" will make the  canvas gray
-Lastly, clicking on the Canvas will exit the python program."""
+canvas.exitonclick()

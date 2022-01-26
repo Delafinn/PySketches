@@ -1,12 +1,19 @@
 # PySketches
 
-How To:
-PySketches uses several inputs. arrow keys will move the sketcher,
-“Z” will pull your pen off the canvas so you can move around the canvas without drawing.
-“X” allows you to put the pen back on the canvas to continue drawing.
-“C” allows you the change the color (keep in mind the colors are randomly generated.
-"R" allows you to change the color of the background to a gray background.
-"E" allow you to change the color of the background to a white background.
-“Spacebar” will clear the canvas.
+### How To:
 
-Lastly, clicking on the Canvas will exit the python program.
+Use the arrow keys to move the sketcher.
+
+`Z` will pull your pen off the canvas so you can move around the canvas without drawing.
+
+`X` puts the pen back on the canvas to continue drawing.
+
+`C` randomly changes the color.
+
+`G` changes the color of the background to a gray.
+
+`E` changes the color of the background to a white.
+
+`Space` will clear the canvas.
+
+Clicking on the canvas will exit the program.
