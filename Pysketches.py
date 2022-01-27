@@ -49,15 +49,23 @@ def gray_theme():
 def light_theme():
     canvas.bgcolor("white")
 
+def pen_up():
+    tim.penup()
+
+def pen_down():
+    tim.pendown()
+
+def clear():
+    tim.clear()
 
 canvas.onkeypress(key="Up", fun=move_up)
 canvas.onkeypress(key="Down", fun=move_down)
 canvas.onkeypress(key="Right", fun=move_right)
 canvas.onkeypress(key="Left", fun=move_left)
-canvas.onkeypress(key="z", fun=tim.penup())
-canvas.onkeypress(key="x", fun=tim.pendown())
+canvas.onkeypress(key="z", fun=pen_up)
+canvas.onkeypress(key="x", fun=pen_down)
 canvas.onkeypress(key="c", fun=random_colors)
-canvas.onkeypress(key="space", fun=tim.clear())
+canvas.onkeypress(key="space", fun=clear)
 canvas.onkeypress(key="g", fun=gray_theme)
 canvas.onkeypress(key="e", fun=light_theme)
 
